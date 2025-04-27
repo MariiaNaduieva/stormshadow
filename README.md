@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# One-Page Business Card Website for "Storm Shadow" Company
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created on behalf of **Storm Shadow** company and is a modern one-page business card website. It is fully responsive and showcases the company's services, portfolio, and contact information in a sleek and accessible manner.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Website Structure
 
-### `npm start`
+1. **Main Section (Banner)**  
+   — A large background banner with a title and semi-transparent text overlay  
+   — An animated arrow pointing down for smooth navigation to the next sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **"UsageSection"**  
+   — Cards with key advantages of using the AJAX system  
+   — Informative icons/images on the left, text on the right  
+   — Subtle hover effect for highlighting cards
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **"RemoteUsageSection"**  
+   — Description of remote video surveillance via phone, tablet, or PC  
+   — Illustration on the right, text on the left  
+   — Scroll-triggered animation (`framer-motion`)
 
-### `npm test`
+4. **"AdvantagesSection"**  
+   — Four advantage tiles for the AJAX system, two per row  
+   — Smooth tile scaling effect on hover
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **"ExamplesSection"**  
+   — Grid of 4 clickable images/preview tiles  
+   — Click opens a modal with a carousel and navigation arrows  
+   — Text description above and below the image grid
 
-### `npm run build`
+6. **"ContactSection"**  
+   — Interactive blocks: address, phone, email, business hours  
+   — Clicking on a block opens Google Maps / makes a call / opens an email client  
+   — Hover effect highlights the entire block
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React + Material-UI**: All interface components from MUI, unified style and theme
+- **Functional React**: `forwardRef`, `useRef`, `useState`, `useEffect` hooks
+- **Smooth Navigation**: Sections scroll smoothly via `scrollIntoView({ behavior: "smooth" })`
+- **Animations**: Section appearances (`framer-motion`), hover effects using MUI SX styles
+- **Mobile Responsiveness**: All grids and elements adapt to any screen size
+- **Clickability**: Entire "Contact" block is clickable, not just the text links
