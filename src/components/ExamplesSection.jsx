@@ -105,7 +105,17 @@ export const ExamplesSection = React.forwardRef((props, ref) => {
           sx: { backgroundColor: "transparent", boxShadow: "none" },
         }}
       >
-        <Box sx={{ position: "relative" }}>
+        <Box
+          onClick={handleClose}
+          sx={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <IconButton
             onClick={handleClose}
             sx={{
@@ -121,7 +131,10 @@ export const ExamplesSection = React.forwardRef((props, ref) => {
           </IconButton>
 
           <IconButton
-            onClick={showPrev}
+            onClick={(e) => {
+              e.stopPropagation();
+              showPrev();
+            }}
             sx={{
               position: "absolute",
               top: "50%",
@@ -136,18 +149,42 @@ export const ExamplesSection = React.forwardRef((props, ref) => {
           </IconButton>
 
           <Box
-            component="img"
-            src={`/images/${images[currentIndex]}`}
-            alt={`Príklad ${currentIndex + 1}`}
             sx={{
-              width: "100%",
-              maxHeight: fullScreen ? "80vh" : "70vh",
-              objectFit: "contain",
+              height: fullScreen ? "80vh" : "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              p: 2,
             }}
-          />
+          >
+            <Box
+              component="img"
+              src={`/images/${images[currentIndex]}`}
+              alt={`Príklad ${currentIndex + 1}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                const { clientX, currentTarget } = e;
+                const middle = currentTarget.offsetWidth / 2;
+                if (clientX < middle) {
+                  showPrev();
+                } else {
+                  showNext();
+                }
+              }}
+              sx={{
+                maxWidth: "90vw",
+                maxHeight: "70vh",
+                objectFit: "contain",
+                cursor: "pointer",
+              }}
+            />
+          </Box>
 
           <IconButton
-            onClick={showNext}
+            onClick={(e) => {
+              e.stopPropagation();
+              showNext();
+            }}
             sx={{
               position: "absolute",
               top: "50%",
