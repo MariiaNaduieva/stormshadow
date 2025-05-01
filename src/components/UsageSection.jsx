@@ -40,6 +40,15 @@ K dispozícii sú aj kamery s rozlíšením 4K, ktoré poskytujú neuveriteľne 
 
   return (
     <Box ref={ref} sx={{ py: 10, backgroundColor: "#fafafa" }}>
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        textAlign="center"
+        gutterBottom
+        sx={{ mb: 5 }}
+      >
+        Výberom nás získate
+      </Typography>
       <Container>
         <Grid container spacing={4}>
           {cards.map((card, i) => (

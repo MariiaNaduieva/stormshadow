@@ -37,6 +37,7 @@ export const App = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const menuItems = [
+    { label: "Naša ponuka", ref: usageRef },
     { label: "Vzdialené používanie", ref: remoteRef },
     { label: "Výhody", ref: advantagesRef },
     { label: "Príklady našich prác", ref: examplesRef },
@@ -53,7 +54,7 @@ export const App = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: "#634d94" }}>
+      <AppBar position="sticky" sx={{ backgroundColor: "#1a1a1a" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography
             variant="h6"
@@ -90,7 +91,7 @@ export const App = () => {
               </Drawer>
             </>
           ) : (
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box sx={{ display: "flex", gap: 4 }}>
               {menuItems.map(({ label, ref }) => (
                 <Button
                   key={label}
@@ -132,7 +133,7 @@ export const App = () => {
             fontWeight="bold"
             gutterBottom
           >
-            Inštalácia bezpečnostných systémov AJAX
+            Inštalácia bezpečnostných systémov AJAX na Slovensku
           </Typography>
           <Typography variant={isMobile ? "body1" : "h5"} mb={isMobile ? 1 : 2}>
             Spoločnosť Storm Shadow s.r.o. ponúka inštaláciu systémov
